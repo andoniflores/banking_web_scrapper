@@ -1,3 +1,6 @@
 .env
 encryption_key.key
 credentials.json
+token.json
+__pycache__/
+test.py
