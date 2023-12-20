@@ -163,8 +163,8 @@ soup = BeautifulSoup(html, 'html5lib')
 table = soup.find('table', attrs = {'id':'posted-table'})
 bank_data = []
 for row in table.findAll('tr'):
-    clss = row.attrs.get('class')
-    if clss is not None and "searchable" in clss:
+    row_class = row.attrs.get('class')
+    if row_class is not None and "searchable" in row_class:
         data = {}
         data['date'] = row.find('td', title=True)['title']
         data['description'] = row.find('td', class_='cW cVT cUT').contents[0].text.strip()
