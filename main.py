@@ -14,7 +14,7 @@ driver.quit()
 creds = google_sheets_api.auth_user(["https://www.googleapis.com/auth/spreadsheets"])
 spreadsheet_id = os.getenv('SPREADSHEET_ID')
 if not spreadsheet_id:
-    spreadsheet_id = google_sheets_api.create_spreadsheet("Bank Statement")
+    spreadsheet_id = google_sheets_api.create_spreadsheet("Household Expenses")
     set_key(find_dotenv(), 'SPREADSHEET_ID', spreadsheet_id)
 
 spreadsheet_headers = ["Date", "Description", "Amount Spent", "Amount Received", "Balance"]
